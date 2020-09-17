@@ -1,2 +1,2 @@
-# swordfish file downloader
-private tool for downloading file form the blue
+# swordfish file download manager
+private tool for downloading file from the blue
