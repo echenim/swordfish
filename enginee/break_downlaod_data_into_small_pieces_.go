@@ -1,7 +1,6 @@
 package enginee
 
-//for file size is 100 bytes, our pieces should like:
-// [[0 20] [21 41] [42 62] [63 83] .....]
+
 func (d Downloader) breakFileInToPieces(pieces [][2]int, eachSize int) {
 
 	for i := range pieces {
