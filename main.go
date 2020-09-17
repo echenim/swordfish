@@ -8,9 +8,9 @@ import (
 
 func main() {
 	d := dw.Downloader{
-		From:   "",
-		To:     "",
-		Pieces: 20,
+		From:   "http://192.168.1.73/armwealth/css/Mcknight.mp4",
+		To:     "download/home.mp4",
+		Pieces: 100,
 	}
 
 	er := d.StartDownloading()

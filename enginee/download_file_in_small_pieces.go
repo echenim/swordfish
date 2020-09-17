@@ -21,12 +21,12 @@ func (d Downloader) DownloadFilePieceByPiece(i int, c [2]int) error {
 	if resp.StatusCode > 299 {
 		return fmt.Errorf(fmt.Sprintf("Can't process, response is %v", resp.StatusCode))
 	}
-	fmt.Printf("Downloaded %v bytes for section %v\n", resp.Header.Get("Content-Length"), i)
+	fmt.Printf("Downloaded %v bytes for piece %v\n", resp.Header.Get("Content-Length"), i)
 	b, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return err
 	}
-	err = ioutil.WriteFile(fmt.Sprintf("section-%v.tmp", i), b, os.ModePerm)
+	err = ioutil.WriteFile(fmt.Sprintf("tmp/piece-%v.tmp", i), b, os.ModePerm)
 	if err != nil {
 		return err
 	}

@@ -29,5 +29,5 @@ func (d Downloader) StartDownloading() error {
 
 	log.Println(pieces)
 	d.concurrentDownload(pieces, er)
-	return nil
+	return d.mergeAll(pieces)
 }

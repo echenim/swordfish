@@ -14,7 +14,7 @@ func (d Downloader) mergeAll(sections [][2]int) error {
 	}
 	defer f.Close()
 	for i := range sections {
-		tmpFileName := fmt.Sprintf("piece-%v.tmp", i)
+		tmpFileName := fmt.Sprintf("tmp/piece-%v.tmp", i)
 		b, err := ioutil.ReadFile(tmpFileName)
 		if err != nil {
 			return err
